@@ -24,7 +24,7 @@ def run():
     # Function To Load Our Dataset
     @st.cache_data
     def load_data(the_file_path):
-        df = pd.read_csv("C:/Users/User/Desktop/shopping trends/suppersales/shopping_trends_updated.csv")
+        df = pd.read_csv("suppersales/shopping_trends_updated.csv")
         df.columns = df.columns.str.replace(" ", "_")
         df.rename(
             columns={"Purchase_Amount_(USD)": "Price_in_USD"}, inplace=True)
